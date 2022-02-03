@@ -144,7 +144,8 @@ main{
 }
 
 /* tables */
-.main-currency-table{
+
+/* .main-currency-table{
     width: 70%;
     min-width: 235px;
     max-width: 500px;
@@ -223,6 +224,9 @@ main{
     height: 15px;
     margin-left: 10px;
     background-image: url('./assets/icons/trending-up.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .currency-table--date{
@@ -239,4 +243,122 @@ main{
     font-size: 1.2rem;
     line-height: 1.5rem;
     color: var(--warm-black);
+} */
+
+
+.main-tables-container{
+    width: 100%;
+    min-width: 288px;
+    max-width: 900px;
+    margin: 0 auto;
 }
+
+.main-currency-table{
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+
+    display: flex;
+        justify-content: space-between;
+        align-items: center;
+}
+
+.leftArrow{
+    width: 13px;
+    height: 8px;
+
+    background-image: url('./assets/icons/right-arrow.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: scaleX(-1);
+}
+.rightArrow{
+    width: 13px;
+    height: 8px;
+
+    background-image: url('./assets/icons/right-arrow.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.currency-table--container{
+    width: 80%;
+    height: 160px;
+}
+
+.currency-table--title p {
+    font-size: 1.8rem;
+    font-weight: bold;
+    line-height: 2.4rem;
+    color: var(--bitcoin-orange);
+    text-align: left;
+    padding-left: 25%;
+    margin-bottom: 10px;
+}
+
+.currency-table--container .table{
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    gap: 2px;
+    
+}
+.currency-table--container .table >  div{
+    width: 100%;
+    height: 40px;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1.9rem;
+    color: #B5B0AC;
+    background-color: var(--just-white);
+    display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    padding-left: 10%;
+    
+}
+.currency-table--container .table :nth-child(even){
+    display: flex;
+}
+
+.down{
+    display: inline-block;
+    background-image: url('./assets/icons/trending-down.svg');
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+    /* background-size: cover; */
+    background-position: center;
+    background-repeat: no-repeat;
+}
+ .up{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-left: 10px;
+    background-image: url('./assets/icons/trending-up.svg');
+    /* background-size: cover; */
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+.currency-table--container .table :nth-child(1){
+    border-radius: 15px 0 0 0 ;
+    
+}
+.currency-table--container .table :nth-child(2){
+    border-radius: 0 15px 0 0 ;
+    
+}
+.currency-table--container .table :nth-last-child(1){
+    border-radius: 0 0 15px 0 ;
+}
+.currency-table--container .table :nth-last-child(2){
+    border-radius: 0 0 0 15px ;
+}
+
+
+
+
